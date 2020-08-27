@@ -1,0 +1,1 @@
+{"ast":null,"code":"import firebase from \"./firebase\";\nvar db = firebase.firestore();\nexport default db;","map":null,"metadata":{},"sourceType":"module"}

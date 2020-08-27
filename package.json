@@ -1,0 +1,77 @@
+{
+	"name": "doctor-mbti",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "next",
+		"build": "next build",
+		"export": "next export",
+		"deploy": "next build && next export && firebase deploy",
+		"prestart": "npm run build",
+		"start": "cross-env NODE_ENV=production PORT=3000 pm2 start server.js --watch"
+	},
+	"author": "hsyun",
+	"license": "MIT",
+	"dependencies": {
+		"antd": "^4.5.1",
+		"css-loader": "^4.2.1",
+		"file-loader": "^6.0.0",
+		"firebase": "^7.17.1",
+		"next": "^9.5.1",
+		"next-images": "^1.4.1",
+		"next-redux-wrapper": "^6.0.2",
+		"prop-types": "^15.7.2",
+		"react": "^16.13.1",
+		"react-activity": "^1.2.2",
+		"react-dom": "^16.13.1",
+		"react-facebook": "^8.1.4",
+		"react-redux": "^7.1.0-rc.1",
+		"redux": "^4.0.5",
+		"style-loader": "^1.2.1",
+		"styled-components": "~4.0.0",
+		"url-loader": "^4.1.0",
+		"uuid": "^8.3.0"
+	},
+	"devDependencies": {
+		"cross-env": "^7.0.2",
+		"eslint": "^7.6.0",
+		"eslint-plugin-import": "^2.22.0",
+		"eslint-plugin-react": "^7.20.5",
+		"eslint-plugin-react-hooks": "^4.0.8",
+		"gh-pages": "^3.1.0",
+		"webpack": "^4.44.1"
+	},
+	"babel": {
+		"env": {
+			"development": {
+				"presets": [
+					"next/babel"
+				],
+				"plugins": [
+					[
+						"styled-components",
+						{
+							"ssr": true,
+							"displayName": true
+						}
+					]
+				]
+			},
+			"production": {
+				"presets": [
+					"next/babel"
+				],
+				"plugins": [
+					[
+						"styled-components",
+						{
+							"ssr": true,
+							"displayName": false
+						}
+					]
+				]
+			}
+		}
+	}
+}

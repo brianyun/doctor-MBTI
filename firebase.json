@@ -1,0 +1,106 @@
+{
+	"hosting": {
+		"public": "./out",
+		"headers": [
+			{
+				"source": "**/*.@(js|html)",
+				"headers": [
+					{
+						"key": "Cache-Control",
+						"value": "max-age=0"
+					}
+				]
+			}
+		],
+		"ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+		"rewrites": [
+			{
+				"source": "/test",
+				"destination": "/test.html"
+			},
+			{
+				"source": "/loading",
+				"destination": "/loading.html"
+			},
+			{
+				"source": "/result/dentist",
+				"destination": "/result/dentist.html"
+			},
+			{
+				"source": "/result/developer",
+				"destination": "/result/developer.html"
+			},
+			{
+				"source": "/result/employee",
+				"destination": "/result/employee.html"
+			},
+			{
+				"source": "/result/flight",
+				"destination": "/result/flight.html"
+			},
+			{
+				"source": "/result/freshmen",
+				"destination": "/result/freshmen.html"
+			},
+			{
+				"source": "/result/hero",
+				"destination": "/result/hero.html"
+			},
+			{
+				"source": "/result/hwata",
+				"destination": "/result/hwata.html"
+			},
+			{
+				"source": "/result/ingukgong",
+				"destination": "/result/ingukgong.html"
+			},
+			{
+				"source": "/result/karaoke",
+				"destination": "/result/karaoke.html"
+			},
+			{
+				"source": "/result/mask",
+				"destination": "/result/mask.html"
+			},
+			{
+				"source": "/result/pediatric",
+				"destination": "/result/pediatric.html"
+			},
+			{
+				"source": "/result/poop",
+				"destination": "/result/poop.html"
+			},
+			{
+				"source": "/result/surgeon",
+				"destination": "/result/surgeon.html"
+			},
+			{
+				"source": "/result/travel",
+				"destination": "/result/travel.html"
+			},
+			{
+				"source": "/result/unemployed",
+				"destination": "/result/unemployed.html"
+			},
+			{
+				"source": "/result/youtuber",
+				"destination": "/result/youtuber.html"
+			},
+			{
+				"source": "/result/**",
+				"destination": "/result/**.html"
+			},
+			{
+				"source": "**",
+				"destination": "/index.html"
+			}
+		]
+	},
+	"storage": {
+		"rules": "storage.rules"
+	},
+	"firestore": {
+		"rules": "firestore.rules",
+		"indexes": "firestore.indexes.json"
+	}
+}

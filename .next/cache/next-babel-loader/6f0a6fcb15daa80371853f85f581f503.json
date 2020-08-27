@@ -1,0 +1,1 @@
+{"ast":null,"code":"import firebase from \"firebase\";\nimport config from \"./firebaseConfig\";\n\ntry {\n  firebase.app();\n} catch (error) {\n  firebase.initializeApp(config); //firebase.analytics();\n  //console.log(error);\n}\n\nexport default firebase;","map":null,"metadata":{},"sourceType":"module"}
